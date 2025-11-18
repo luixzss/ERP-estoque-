@@ -5,5 +5,14 @@ def cadastrar_produto():
 
     nome = input("Nome: ")
     categoria = input("Categoria: ")
-    unidade = input("Unidade (UN, KG, LT): ").upper()  
+    unidade = input("Unidade (UN, KG, LT): ").upper()
+    preco = float(input("Preço: "))
+    quantidade = float(input("Quantidade: "))
+
+    cur.execute("""
+        INSERT INTO produtos (nome, categoria, unidade_medida, preco, quantidade)
+        VALUES (?, ?, ?, ?, ?)
+    """, (nome, categoria, unidade, preco, quantidade))
+
+
     
