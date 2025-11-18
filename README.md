@@ -11,8 +11,11 @@ Funcionamento:
 O sitema tem as seguintes funções:
 
 1- Cadastrar produto
+
 2- Excluir produto
+
 3- Mostrar relatório de produtos cadastrados
+
 4- Sair
 
 1- Cadastrar produto:
