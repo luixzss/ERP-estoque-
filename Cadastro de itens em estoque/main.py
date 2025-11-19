@@ -1,5 +1,5 @@
 from estoque import cadastrar_produto, excluir_produto, mostrar_relatorio
-from database import con  # para fechar a conexão ao sair
+from database import con  # para fechar depois
 
 def main():
     while True:
@@ -9,7 +9,7 @@ def main():
         print("3 - Mostrar relatório")
         print("4 - Sair")
 
-        opcao = input("Escolha: ").strip()
+        opcao = input("Escolha: ")
 
         if opcao == "1":
             cadastrar_produto()
@@ -19,13 +19,10 @@ def main():
             mostrar_relatorio()
         elif opcao == "4":
             print("Saindo...")
-            try:
-                con.close()
-            except Exception:
-                pass
+            con.close()
             break
         else:
             print("Opção inválida.")
 
-if __name__ == "__main__":
-    main()
+if _name_ == "_main_":
+    main()
