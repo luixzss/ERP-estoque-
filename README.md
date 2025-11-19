@@ -7,6 +7,9 @@ O sistema é em python e tem o objetivo de representar um estoque com operaçõe
 Conceitos:
 Cadastro de produtos, controle de estoques, relatórios, estrutura de dados, SqLite, CRUD.
 
+Rodando o código: 
+O código funciona no arquivo main.
+
 Funcionamento:
 O sitema tem as seguintes funções:
 
