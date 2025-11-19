@@ -10,3 +10,18 @@ def main():
 
         opcao = input("Escolha: ")
 
+         if opcao == "1":
+            cadastrar_produto()
+        elif opcao == "2":
+            excluir_produto()
+        elif opcao == "3":
+            mostrar_relatorio()
+        elif opcao == "4":
+            print("Saindo...")
+            con.close()
+            break
+        else:
+            print("Opção inválida.")
+
+if _name_ == "_main_":
+    main()
