@@ -29,7 +29,23 @@ def excluir_produto():
     else:
         print("Produto não encontrado.")
 
+def mostrar_relatorio():
+    print("\n--- Relatório ---")
 
+    cur.execute("SELECT * FROM produtos")
+    produtos = cur.fetchall()
+
+    if not produtos:
+        print("Nenhum produto encontrado.")
+        return
+
+    print(f"{'ID':<5} | {'Nome':<20} | {'Qtd.':<10} | {'Unid.':<5} | {'Preço':<10}")
+    print("-" * 60)
+
+    for p in produtos:
+        print(f"{p[0]:<5} | {p[1]:<20} | {p[5]:<10.2f} | {p[3]:<5} | R$ {p[4]:.2f}")
+
+    print("-" * 60)
 
 
     
