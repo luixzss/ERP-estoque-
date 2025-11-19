@@ -1,5 +1,6 @@
 from estoque import cadastrar_produto, excluir_produto, mostrar_relatorio
 from database import con  # para fechar depois
+
 def main():
     while True:
         print("\n=== Sistema de Estoque ===")
@@ -10,7 +11,7 @@ def main():
 
         opcao = input("Escolha: ")
 
-         if opcao == "1":
+        if opcao == "1":
             cadastrar_produto()
         elif opcao == "2":
             excluir_produto()
@@ -21,7 +22,7 @@ def main():
             con.close()
             break
         else:
-            print("Opção inválida.")    
+            print("Opção inválida.")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
