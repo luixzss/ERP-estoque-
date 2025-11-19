@@ -1,4 +1,4 @@
-from codigo import cadastrar_produto, excluir_produto, mostrar_relatorio
+from estoque import cadastrar_produto, excluir_produto, mostrar_relatorio
 from database import con  # para fechar depois
 def main():
     while True:
@@ -21,7 +21,7 @@ def main():
             con.close()
             break
         else:
-            print("Opção inválida.")
+            print("Opção inválida.")    
 
 if _name_ == "_main_":
     main()
